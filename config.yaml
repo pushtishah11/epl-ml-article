@@ -1,0 +1,11 @@
+paths:
+  raw: data/raw
+  processed: data/processed
+  figs: outputs/figures
+  metrics: outputs/metrics
+data:
+  season: "2015-2016"
+model:
+  seed: 42
+simulate:
+  runs: 10000
