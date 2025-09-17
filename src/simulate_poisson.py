@@ -84,7 +84,7 @@ plt.close()
 top_titles = title_probs.sort_values(ascending=False).head(10)
 
 plt.figure(figsize=(10,6))
-plt.bar(top_titles.index, top_titles.values, color="blue", alpha=0.7)
+plt.bar(top_titles.index, top_titles.values, alpha=0.7)
 plt.title("EPL 2015/16 Title Probabilities (Poisson Simulation)")
 plt.ylabel("Probability (%)")
 plt.xticks(rotation=45, ha="right")
