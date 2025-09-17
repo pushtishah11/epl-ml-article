@@ -87,7 +87,7 @@ print("\n🏆 Title Probabilities (%):\n", title_probs)
 
 # --- Step 7a: Leicester histogram ---
 plt.figure(figsize=(10,6))
-plt.hist(results_df["Leicester"], bins=30, alpha=0.7, color="blue")
+plt.hist(results_df["Leicester"], bins=30, alpha=0.7 )
 plt.axvline(81, color="red", linestyle="--", label="Actual Points (81)")
 plt.title("Leicester Simulated Points Distribution (2015/16, Regression)")
 plt.xlabel("Points")
@@ -95,7 +95,7 @@ plt.ylabel("Frequency")
 plt.legend()
 plt.grid(alpha=0.3)
 plt.tight_layout()
-plt.savefig(os.path.join(OUTPUT_DIR, "leicester_points_distribution.png"))
+plt.savefig(os.path.join(OUTPUT_DIR, "leicester_points_distribution(poisson).png"))
 plt.close()
 
 # --- Step 7b: Title probabilities bar chart ---
@@ -104,7 +104,7 @@ title_probs.sort_values(ascending=False).plot(kind="bar")
 plt.title("EPL 2015/16 Title Probabilities (Regression Simulation)")
 plt.ylabel("Probability (%)")
 plt.tight_layout()
-plt.savefig(os.path.join(OUTPUT_DIR, "title_probabilities.png"))
+plt.savefig(os.path.join(OUTPUT_DIR, "title_probabilities(poisson).png"))
 plt.close()
 
 # --- Step 7c: Finish position heatmap ---
@@ -128,5 +128,5 @@ plt.title("EPL 2015/16 Finish Position Probabilities (Regression Simulation)")
 plt.xlabel("Final League Position")
 plt.ylabel("Team")
 plt.tight_layout()
-plt.savefig(os.path.join(OUTPUT_DIR, "finish_position_heatmap.png"))
+plt.savefig(os.path.join(OUTPUT_DIR, "finish_position_heatmap(poisson).png"))
 plt.close()
